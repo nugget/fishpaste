@@ -1,7 +1,7 @@
 PREFIX=/usr/local
 BINDIR=$(PREFIX)/bin
 
-fishpaste: 
+fishpaste: main.go
 	go build .
 
 install: fishpaste

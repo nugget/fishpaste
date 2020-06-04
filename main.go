@@ -8,6 +8,9 @@ import (
 	"unicode/utf8"
 )
 
+//
+// Replace any fancy prompt with just a '$' character
+//
 func replacePrompt(buf []byte) ([]byte, error) {
 	newPrompt := []byte("$ ")
 
@@ -37,6 +40,9 @@ func replacePrompt(buf []byte) ([]byte, error) {
 	return buf, nil
 }
 
+//
+// Remove any right-side prompt (currently timestamp and timing info)
+//
 func stripTimestamp(buf []byte) ([]byte, error) {
 	s := string(buf)
 
