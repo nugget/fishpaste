@@ -28,11 +28,46 @@ Taking terminal output like this:
 
 Without any processing, pasting the text into Slack isn't the greatest experience:
 
-![Screenshot of Terminal](images/badpaste.png)
+```console
+Last login: Thu Jun  4 16:05:36 on ttys003
+                             _          _
+                            | | ___   _| |__   ___
+                            | |/ / | | | '_ \ / _ \
+                            |   <| |_| | |_) | (_) |
+                            |_|\_\\__,_|_.__/ \___/
+                              kubo.nuggethaus.net
+
+You have new mail.
+Darwin kubo.local 19.5.0 x86_64
+16:06  up 19:18, 6 users, load averages: 1.62 1.53 1.60
+ I  ⎈ docker-desktop  ~  kubectx production                          16:06:27
+Switched to context "production".
+ I  ⎈ production  ~  sleep 4                                 105ms  16:06:31
+ I  ⎈ production  ~  ls -la | wc -l                         4003ms  16:06:40
+      81
+ I  ⎈ production  ~ 
+```
 
 Using the Fish Paste filter, though, it's much nicer:
 
-![Screenshot of Terminal](images/goodpaste.png)
+```console
+Last login: Thu Jun  4 16:05:36 on ttys003
+                             _          _
+                            | | ___   _| |__   ___
+                            | |/ / | | | '_ \ / _ \
+                            |   <| |_| | |_) | (_) |
+                            |_|\_\\__,_|_.__/ \___/
+                              kubo.nuggethaus.net
 
+You have new mail.
+Darwin kubo.local 19.5.0 x86_64
+16:06  up 19:18, 6 users, load averages: 1.62 1.53 1.60
+$ kubectx production
+Switched to context "production".
+$ sleep 4
+$ ls -la | wc -l
+      81
+$
+```
 
 [Alfred]: https://alfredapp.com/
