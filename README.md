@@ -23,12 +23,15 @@ whenever I want to cut and paste a piece of my work onto Slack or a Reddit post
 or something like that.
 
 Taking terminal output like this:
+
 ![Screenshot of Terminal](images/terminal.png)
 
 Without any processing, pasting the text into Slack isn't the greatest experience:
+
 ![Screenshot of Terminal](images/badpaste.png)
 
 Using the Fish Paste filter, though, it's much nicer:
+
 ![Screenshot of Terminal](images/goodpaste.png)
 
 
