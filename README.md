@@ -1,4 +1,4 @@
-# fishpaste
+# Fish Paste filter
 
 This is a little tool I use to make it easier to paste terminal session
 snippets into other apps like Slack or IRC.  It's tailored to take a clipboard
@@ -14,7 +14,7 @@ general-purpose filter that would be more universally useful.
 
 For now, though, it scratches my itch.
 
-## Without Fish Paste
+## How I use this tool 
 
 My Fish setup has a fancy left prompt that uses a lot of goofy unicode
 characters paired with a right prompt that includes timestamps and command
@@ -69,5 +69,13 @@ $ ls -la | wc -l
       81
 $
 ```
+
+## Manual Operation
+
+In macOS this can be used directly without Alfred.  It simply expects the
+clipboard data to arrive on stdin and then emits the sanitized text to stdout.
+You can run it like this as well:
+
+`pbpaste | fishpaste | pbcopy`
 
 [Alfred]: https://alfredapp.com/
