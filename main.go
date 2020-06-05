@@ -2,6 +2,7 @@ package main
 
 import (
 	"bufio"
+	"flag"
 	"fmt"
 	"os"
 	"regexp"
@@ -52,7 +53,30 @@ func stripTimestamp(buf []byte) ([]byte, error) {
 	return []byte(s), nil
 }
 
+//
+// If an application name was supplied on the command line, we can add a custom
+// prefix and suffix based on the application.  I use this to wrap the paste in
+// Markdown syntax when pasting into Slack or Discord
+//
+func wrappers(app string) (prefix, suffix string) {
+	switch app {
+	case "Slack":
+	case "Discord":
+		prefix, suffix = "```\n", "```"
+	}
+	return
+}
+
 func main() {
+	fgPtr := flag.String("app", "", "Foreground App Name")
+	flag.Parse()
+
+	foreground := *fgPtr
+
+	prefix, suffix := wrappers(foreground)
+
+	fmt.Printf(prefix)
+
 	scanner := bufio.NewScanner(os.Stdin)
 	for scanner.Scan() {
 		var err error
@@ -73,4 +97,6 @@ func main() {
 
 		fmt.Println(string(buf))
 	}
+
+	fmt.Printf(suffix)
 }
