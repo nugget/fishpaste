@@ -1,3 +1,5 @@
+[![Go](https://github.com/nugget/fishpaste/workflows/Go/badge.svg)](https://github.com/nugget/fishpaste/actions?query=workflow%3AGo) [![Go Report Card](https://goreportcard.com/badge/github.com/nugget/fishpaste)](https://goreportcard.com/report/github.com/nugget/fishpaste)
+
 # Fish Paste filter
 
 This is a little tool I use to make it easier to paste terminal session
